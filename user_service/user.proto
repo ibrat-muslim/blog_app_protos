@@ -22,6 +22,10 @@ message IdRequest {
     int64 id = 1;
 }
 
+message EmailRequest {
+    string email = 1;
+}
+
 message GetAllUsersRequest {
     int32 limit = 1;
     int32 page = 2;
