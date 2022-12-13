@@ -9,6 +9,9 @@ option go_package = "genproto/user_service";
 service AuthService {
     rpc Register(RegisterRequest) returns (google.protobuf.Empty) {}
     rpc Verify(VerifyRequest) returns (AuthResponse) {}
+    rpc Login(LoginRequest) returns (AuthResponse) {}
+    rpc ForgotPassword(ForgotPasswordRequest) returns (google.protobuf.Empty) {}
+    rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse) {}
 }
 
 message RegisterRequest {
@@ -21,6 +24,15 @@ message RegisterRequest {
 message VerifyRequest {
     string email = 1;
     string code = 2;
+}
+
+message LoginRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message ForgotPasswordRequest {
+    string email = 1;
 }
 
 message AuthResponse {
