@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package genproto;
+
+import "post.proto";
+import "user.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "genproto/post_service";
+
+service PostService {
+    rpc Create(Post) returns (Post) {}
+    rpc Get(IdRequest) returns (Post) {}
+    rpc GetAll(GetAllPostsRequest) returns (GetAllPostsResponse) {}
+    rpc Update(Post) returns (Post) {}
+    rpc Delete(IdRequest) returns (google.protobuf.Empty) {}
+}
