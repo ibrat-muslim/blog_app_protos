@@ -9,11 +9,15 @@ message Post {
     string title = 2;
     string description = 3;
     string image_url = 4;
-    string user_id = 5;
-    string category_id = 6;
+    int64 user_id = 5;
+    int64 category_id = 6;
     string created_at = 7;
     string updated_at = 8;
-    string views_count = 9;
+    int32 views_count = 9;
+}
+
+message IdRequest {
+    int64 id = 1;
 }
 
 message GetAllPostsRequest {
