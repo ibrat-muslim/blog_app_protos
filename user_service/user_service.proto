@@ -9,9 +9,9 @@ option go_package = "genproto/user_service";
 
 service UserService {
     rpc Create(User) returns (User) {}
-    rpc Get(IdRequest) returns (User) {}
+    rpc Get(GetUserRequest) returns (User) {}
     rpc GetAll(GetAllUsersRequest) returns (GetAllUsersResponse) {}
     rpc GetByEmail(EmailRequest) returns (User) {}
     rpc Update(User) returns (User) {}
-    rpc Delete(IdRequest) returns (google.protobuf.Empty) {}
+    rpc Delete(GetUserRequest) returns (google.protobuf.Empty) {}
 }

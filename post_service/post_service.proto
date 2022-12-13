@@ -9,8 +9,8 @@ option go_package = "genproto/post_service";
 
 service PostService {
     rpc Create(Post) returns (Post) {}
-    rpc Get(IdRequest) returns (Post) {}
+    rpc Get(GetPostRequest) returns (Post) {}
     rpc GetAll(GetAllPostsRequest) returns (GetAllPostsResponse) {}
     rpc Update(Post) returns (Post) {}
-    rpc Delete(IdRequest) returns (google.protobuf.Empty) {}
+    rpc Delete(GetPostRequest) returns (google.protobuf.Empty) {}
 }

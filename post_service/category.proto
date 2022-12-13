@@ -10,6 +10,10 @@ message Category {
     string created_at = 3;
 }
 
+message GetCategoryRequest {
+    int64 id = 1;
+}
+
 message GetAllCategoriesRequest {
     int32 limit = 1;
     int32 page = 2;
