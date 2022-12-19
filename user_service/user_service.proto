@@ -13,5 +13,6 @@ service UserService {
     rpc GetAll(GetAllUsersRequest) returns (GetAllUsersResponse) {}
     rpc GetByEmail(EmailRequest) returns (User) {}
     rpc Update(User) returns (User) {}
+    rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty) {}
     rpc Delete(GetUserRequest) returns (google.protobuf.Empty) {}
 }
