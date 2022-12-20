@@ -24,6 +24,9 @@ message GetAllPostsRequest {
     int32 limit = 1;
     int32 page = 2;
     string search = 3;
+    int64 user_id = 4;
+    int64 category_id = 5;
+    string sort_by_date = 6;
 }
 
 message GetAllPostsResponse {
