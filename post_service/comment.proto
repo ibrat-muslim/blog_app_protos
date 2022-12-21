@@ -20,8 +20,8 @@ message GetCommentRequest {
 message GetAllCommentsRequest {
     int32 limit = 1;
     int32 page = 2;
-    string post_id = 3;
-    string user_id = 4;
+    int64 post_id = 3;
+    int64 user_id = 4;
 }
 
 message GetAllCommentsResponse {
