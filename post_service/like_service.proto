@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package genproto;
+
+import "like.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "genproto/post_service";
+
+service LikeService {
+    rpc CreateOrUpdate(Like) returns (google.protobuf.Empty) {}
+    rpc Get(GetLikeRequest) returns (Like) {}
+	rpc GetLikesDislikesCount(LikesDislikesCountRequest) returns (LikesDislikesCountResponse) {}
+}
